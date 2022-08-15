@@ -1,6 +1,7 @@
 from moviepy.editor import *
+import moviepy
 
-def createSample:
+def createSample():
     clip = VideoFileClip("curb.mp4").subclip(0,20)
 
     clip = clip.volumex(0.8)
@@ -17,6 +18,19 @@ def createSample:
     video.write_videofile("curbwithtext.webm")
 
 def convertBPMToSeconds(bpm):
-    return bpm/60.0
+    return 60.0/bpm
 
-print(convertBPMToSeconds(120))
+
+audio = AudioFileClip(("120bpmtempo.wav"))
+img = ImageClip("1.jpg", duration = convertBPMToSeconds(15))
+img2 = ImageClip("1.jpg", duration = convertBPMToSeconds(15))
+
+#tester = VideoFileClip("1.jpg", duration = convertBPMToSeconds(15))
+tester = VideoFileClip("1.jpg")
+tester2 = VideoFileClip("1.jpg")
+
+clips = [tester, tester2]
+
+tester.write_videofile("tester111.mp4", fps=24)
+
+print(convertBPMToSeconds(111))
