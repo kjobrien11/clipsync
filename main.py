@@ -51,4 +51,4 @@ for i in range(1, len(path), 1):
 #combine clips and export
 final = CompositeVideoClip(final_clips)
 final = final.set_audio(audio)
-final.write_videofile("results/diff.webm", fps=24)
+final.write_videofile("results/yourvideo.webm", fps=24)
