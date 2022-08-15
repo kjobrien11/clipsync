@@ -27,10 +27,16 @@ img2 = ImageClip("1.jpg", duration = convertBPMToSeconds(15))
 
 #tester = VideoFileClip("1.jpg", duration = convertBPMToSeconds(15))
 tester = VideoFileClip("1.jpg")
-tester2 = VideoFileClip("1.jpg")
+tester2 = VideoFileClip("2.jpg")
+tester3 = VideoFileClip("3.jpg")
 
-clips = [tester, tester2]
+tester = tester.set_duration(convertBPMToSeconds(15))
+tester2 = tester2.set_duration(convertBPMToSeconds(15))
+tester3 = tester3.set_duration(convertBPMToSeconds(15))
 
-tester.write_videofile("tester111.mp4", fps=24)
 
-print(convertBPMToSeconds(111))
+dexter = CompositeVideoClip([tester, tester2.set_start(convertBPMToSeconds(120)), tester3.set_start(2*convertBPMToSeconds(120))])
+
+dexter.write_videofile("onbeat.mp4", fps=24)
+
+print(convertBPMToSeconds(120))
