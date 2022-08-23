@@ -1,11 +1,10 @@
-# Photo Sync
-sync photos to a soundtrack. 
+# Clip Sync
+easily create engaging videos by combining photos with a sound track!
 
-this program will sync pictures with a sound track at an inputted bpm in order to create a video where the clips are displayed in a rhythmic manner. 
-easily create videos in seconds with whatever pictures and soundtrack you choose. 
+what makes clip sync different than any other similar service is how it displays the pictures with the sound track. instead of placing them arbitrary, this project calculates the perfect position to place them so they will play in sync with the sound track provided. with multiple photo time division options, this project is great for anyone who wants to post picutre collages in a unique way whether it is a fast burst or slow highlight.
 
-first input how often you want the pictures to show, the BPM of the sound track, starting time of the soundtrack, the folder your pictures are stored in, and the soundtrack file. 
+first, input the photo display time division and the BPM of the sound track you are syncing them with. next, if you don't want to start the song at the begining, input the time you want the soundtrack to start. finally, select the folder your pictures are stored and the file of the sound track. that's it, the program creates a .webm file you can play in a browser. 
 
-then click submit.  Your file will be ready in less than a minute. 
+this projects was created using python and the musicpy library.
 
-for best results use files that are the same size. 
+for best results use files that are the same size.
